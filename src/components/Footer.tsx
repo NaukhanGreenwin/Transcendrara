@@ -40,7 +40,7 @@ const Footer: React.FC<FooterProps> = ({ onPageChange }) => {
                 <Facebook className="w-5 h-5" />
               </motion.a>
               <motion.a 
-                href="https://instagram.com" 
+                href="https://www.instagram.com/transcendara?igsh=em05M2R5bXJxYmJl&utm_source=qr" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.1 }}
@@ -74,6 +74,15 @@ const Footer: React.FC<FooterProps> = ({ onPageChange }) => {
                   whileHover={{ x: 5 }}
                 >
                   Our Services
+                </motion.button>
+              </li>
+              <li>
+                <motion.button 
+                  onClick={() => handlePageChange('pricing')}
+                  className="hover:text-purple-500 transition-colors text-sm"
+                  whileHover={{ x: 5 }}
+                >
+                  Pricing
                 </motion.button>
               </li>
               <li>
@@ -134,13 +143,13 @@ const Footer: React.FC<FooterProps> = ({ onPageChange }) => {
             <ul className="space-y-3">
               <li className="flex items-center space-x-3">
                 <MapPin className="w-5 h-5 text-purple-500" />
-                <span className="text-sm">Brentwood, Los Angeles, CA</span>
+                <span className="text-sm">Toronto, ON</span>
               </li>
               <li className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-purple-500" />
-                <span className="text-sm">+1 (555) 123-4567</span>
-              </li>
-              <li className="flex items-center space-x-3">
+                <span className="text-sm">+1 (905) 555-5555</span>  
+              </li> 
+              <li className="flex items-center space-x-3">  
                 <Mail className="w-5 h-5 text-purple-500" />
                 <span className="text-sm">contact@transcendara.com</span>
               </li>

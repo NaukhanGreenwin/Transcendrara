@@ -94,19 +94,19 @@ const HypnotherapyPage = ({ onPageChange }: { onPageChange: (page: string) => vo
         <AnimatedSection>
           <div className="bg-gradient-to-r from-purple-100 to-indigo-100 rounded-xl p-8 text-center">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">
-              Ready to Begin Your Transformation?
+              Begin Your Transformation Journey
             </h2>
             <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-              Take the first step towards unlocking your full potential with our advanced 
-              hypnotherapy sessions.
+              Discover how advanced hypnotherapy can help you unlock your full potential 
+              and create lasting positive changes in your life.
             </p>
             <motion.button
-              onClick={() => onPageChange('booking')}
+              onClick={() => onPageChange('about')}
               className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-8 py-3 rounded-full font-medium text-lg inline-flex items-center"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              Schedule Your Session
+              Learn More
               <ArrowRight className="ml-2 w-5 h-5" />
             </motion.button>
           </div>

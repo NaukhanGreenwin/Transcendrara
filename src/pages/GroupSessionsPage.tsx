@@ -159,19 +159,19 @@ const GroupSessionsPage = ({ onPageChange }: { onPageChange: (page: string) => v
         <AnimatedSection>
           <div className="bg-gradient-to-r from-purple-100 to-indigo-100 rounded-xl p-8 text-center">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">
-              Join Our Next Session
+              Join Our Community
             </h2>
             <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-              Experience the power of group transformation and connect with like-minded 
-              individuals on their journey to growth and success.
+              Learn more about our group sessions and how they can help you connect with 
+              others while working towards your personal growth goals.
             </p>
             <motion.button
-              onClick={() => onPageChange('booking')}
+              onClick={() => onPageChange('about')}
               className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-8 py-3 rounded-full font-medium text-lg inline-flex items-center"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              Reserve Your Spot
+              Learn More
               <ArrowRight className="ml-2 w-5 h-5" />
             </motion.button>
           </div>

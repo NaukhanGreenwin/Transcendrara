@@ -126,7 +126,7 @@ const Navigation: React.FC<NavigationProps> = ({ currentPage, onPageChange }) =>
 
             <motion.button
               onClick={() => onPageChange('booking')}
-              className="px-8 py-3 bg-gradient-to-r from-purple-600 to-purple-500 text-white rounded-full text-base font-medium shadow-md hover:shadow-lg transition-all duration-300"
+              className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-6 py-2 rounded-full font-medium hover:opacity-90 transition-opacity"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >

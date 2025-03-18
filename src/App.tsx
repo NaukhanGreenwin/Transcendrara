@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Sparkles, Brain, Rocket, ArrowUpRight, Bot as Lotus, Waves, Heart, Star, Users, Calendar } from 'lucide-react';
+import { Sparkles, Brain, Rocket, ArrowUpRight, Bot as Lotus, Waves, Heart, Star, Users } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import PricingPage from './pages/PricingPage';
-import BookingPage from './components/BookingPage';
 import TestimonialsSection from './components/TestimonialsSection';
 import FAQSection from './components/FAQSection';
 import AnimatedSection from './components/AnimatedSection';
@@ -16,6 +15,7 @@ import PerformancePage from './pages/PerformancePage';
 import GroupSessionsPage from './pages/GroupSessionsPage';
 import BenefitsSection from './components/BenefitsSection';
 import AboutPage from './pages/AboutPage';
+import BookingPage from './pages/BookingPage';
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
@@ -66,17 +66,8 @@ function App() {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <motion.button 
-                onClick={() => setCurrentPage('booking')}
-                className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-8 py-3 rounded-full font-medium text-lg hover:opacity-90 transition-opacity flex items-center"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                Book Your Session
-                <ArrowUpRight className="ml-2 w-5 h-5" />
-              </motion.button>
-              <motion.button 
                 onClick={() => setCurrentPage('services')}
-                className="bg-white text-purple-600 border-2 border-purple-600 px-8 py-3 rounded-full font-medium text-lg hover:bg-purple-50 transition-colors flex items-center"
+                className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-8 py-3 rounded-full font-medium text-lg hover:opacity-90 transition-opacity flex items-center"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -200,13 +191,13 @@ function App() {
       {/* Testimonials Section */}
       <TestimonialsSection />
 
-      {/* Booking Section */}
+      {/* Information Section */}
       <AnimatedSection>
         <section className="py-20 bg-white/80">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Begin Your Healing Journey</h2>
-              <p className="text-xl text-gray-600 mb-8">Schedule your complimentary consultation today</p>
+              <p className="text-xl text-gray-600 mb-8">Discover our transformative services</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
               <div className="space-y-6">
@@ -215,10 +206,10 @@ function App() {
                   whileHover={{ scale: 1.02 }}
                 >
                   <div className="flex items-center mb-4">
-                    <Calendar className="w-6 h-6 text-purple-600 mr-3" />
-                    <h3 className="text-lg font-semibold text-gray-900">Flexible Scheduling</h3>
+                    <Heart className="w-6 h-6 text-purple-600 mr-3" />
+                    <h3 className="text-lg font-semibold text-gray-900">Personalized Care</h3>
                   </div>
-                  <p className="text-gray-600">Choose from various available time slots that work best for your schedule.</p>
+                  <p className="text-gray-600">Experience a tailored approach designed to meet your unique needs and goals.</p>
                 </motion.div>
                 <motion.div 
                   className="bg-indigo-50 p-6 rounded-lg"
@@ -226,16 +217,16 @@ function App() {
                 >
                   <div className="flex items-center mb-4">
                     <Users className="w-6 h-6 text-indigo-600 mr-3" />
-                    <h3 className="text-lg font-semibold text-gray-900">Personalized Approach</h3>
+                    <h3 className="text-lg font-semibold text-gray-900">Expert Guidance</h3>
                   </div>
-                  <p className="text-gray-600">Every session is tailored to your unique needs and goals.</p>
+                  <p className="text-gray-600">Benefit from professional expertise and compassionate support throughout your journey.</p>
                 </motion.div>
               </div>
               <div className="bg-gradient-to-br from-purple-100 to-indigo-100 p-8 rounded-xl shadow-lg">
-                <h3 className="text-2xl font-semibold text-gray-900 mb-6">Free Initial Consultation</h3>
+                <h3 className="text-2xl font-semibold text-gray-900 mb-6">Take the Next Step</h3>
                 <p className="text-gray-600 mb-8">
-                  Take the first step towards transformation. Schedule a free 30-minute consultation 
-                  to discuss your goals and learn how we can help you achieve them.
+                  Ready to begin your transformative journey? Book your session now and 
+                  take the first step towards positive change.
                 </p>
                 <motion.button 
                   onClick={() => setCurrentPage('booking')}
@@ -266,8 +257,8 @@ function App() {
               Ready to Transform Your Life?
             </h2>
             <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-              Join us on a journey of self-discovery and personal growth. 
-              Let's unlock your true potential together.
+              Take the first step towards your transformation journey. 
+              Book your session today.
             </p>
             <motion.button 
               onClick={() => setCurrentPage('booking')}
@@ -275,7 +266,7 @@ function App() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              Book Your Session Now
+              Book Your Session
               <ArrowUpRight className="ml-2 w-5 h-5" />
             </motion.button>
           </div>
