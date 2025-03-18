@@ -202,7 +202,7 @@ function App() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
               <div className="space-y-6">
                 <motion.div 
-                  className="bg-purple-50 p-6 rounded-lg"
+                  className="bg-purple-50 p-6 rounded-lg" 
                   whileHover={{ scale: 1.02 }}
                 >
                   <div className="flex items-center mb-4">
