@@ -12,14 +12,11 @@ export default defineConfig({
     outDir: 'dist',
     assetsDir: 'assets',
     emptyOutDir: true,
-    modulePreload: {
-      polyfill: true
-    },
     rollupOptions: {
       output: {
         format: 'es',
-        entryFileNames: 'assets/[name].[hash].js',
-        chunkFileNames: 'assets/[name].[hash].js',
+        entryFileNames: '[name].[hash].mjs',
+        chunkFileNames: '[name].[hash].mjs',
         assetFileNames: 'assets/[name].[hash].[ext]'
       }
     }
