@@ -33,6 +33,11 @@ jobs:
       - name: Build
         run: npm run build
 
+      - name: Copy additional files
+        run: |
+          cp public/.nojekyll dist/
+          cp public/_headers dist/
+
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
