@@ -6,27 +6,23 @@ interface Testimonial {
   quote: string;
   author: string;
   role: string;
-  image: string;
 }
 
 const testimonials: Testimonial[] = [
   {
-    quote: "Transcendara's hypnotherapy sessions have completely transformed my approach to challenges. I've never felt more confident and focused.",
-    author: "Sarah Mitchell",
-    role: "Executive Leader",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=150&h=150"
-  },
-  {
     quote: "The mindfulness techniques I learned here have become an essential part of my daily routine. My stress levels have decreased significantly.",
-    author: "Michael Chen",
-    role: "Tech Entrepreneur",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=150&h=150"
+    author: "Arjun Patel",
+    role: "Tech Entrepreneur"
   },
   {
     quote: "The personalized approach and genuine care for my progress made all the difference. I'm achieving goals I once thought impossible.",
-    author: "Emma Rodriguez",
-    role: "Professional Athlete",
-    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80&w=150&h=150"
+    author: "Priya Sharma",
+    role: "Wellness Coach"
+  },
+  {
+    quote: "Through hypnotherapy, I've discovered new depths of clarity and purpose. The transformation has been remarkable.",
+    author: "Zain Ahmed",
+    role: "Creative Director"
   }
 ];
 
@@ -46,17 +42,10 @@ const TestimonialsSection = () => {
             <AnimatedSection key={index} className="h-full">
               <div className="bg-white rounded-xl shadow-lg p-8 h-full flex flex-col">
                 <Quote className="w-10 h-10 text-purple-600 mb-6" />
-                <p className="text-gray-600 mb-8 flex-grow">{testimonial.quote}</p>
-                <div className="flex items-center">
-                  <img
-                    src={testimonial.image}
-                    alt={testimonial.author}
-                    className="w-12 h-12 rounded-full object-cover"
-                  />
-                  <div className="ml-4">
-                    <p className="font-semibold text-gray-900">{testimonial.author}</p>
-                    <p className="text-gray-600 text-sm">{testimonial.role}</p>
-                  </div>
+                <p className="text-gray-600 mb-8 flex-grow text-lg italic">{testimonial.quote}</p>
+                <div className="border-t pt-4">
+                  <p className="font-semibold text-gray-900">{testimonial.author}</p>
+                  <p className="text-purple-600 text-sm">{testimonial.role}</p>
                 </div>
               </div>
             </AnimatedSection>

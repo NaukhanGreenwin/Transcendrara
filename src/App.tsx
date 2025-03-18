@@ -2,12 +2,20 @@ import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Sparkles, Brain, Rocket, ArrowUpRight, Bot as Lotus, Waves, Heart, Star, Users, Calendar } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
-import PricingPage from './components/PricingPage';
+import PricingPage from './pages/PricingPage';
 import BookingPage from './components/BookingPage';
 import TestimonialsSection from './components/TestimonialsSection';
 import FAQSection from './components/FAQSection';
 import AnimatedSection from './components/AnimatedSection';
 import Navigation from './components/Navigation';
+import Footer from './components/Footer';
+import ServicesPage from './pages/ServicesPage';
+import HypnotherapyPage from './pages/HypnotherapyPage';
+import MindfulnessPage from './pages/MindfulnessPage';
+import PerformancePage from './pages/PerformancePage';
+import GroupSessionsPage from './pages/GroupSessionsPage';
+import BenefitsSection from './components/BenefitsSection';
+import AboutPage from './pages/AboutPage';
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
@@ -52,19 +60,39 @@ function App() {
               <span>Transcend limits & thrive</span>
               <Sparkles className="w-6 h-6 ml-2" />
             </div>
-            <p className="max-w-2xl mx-auto text-xl text-gray-600 mb-8">
+            <p className="max-w-2xl mx-auto text-xl text-gray-600 mb-12">
               Guiding ambitious minds to break free from mental & behavioural barriers, 
               unlock potential, and elevate from within.
             </p>
-            <motion.button 
-              onClick={() => setCurrentPage('booking')}
-              className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-8 py-3 rounded-full font-medium text-lg hover:opacity-90 transition-opacity flex items-center mx-auto"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              Book Your Session
-              <ArrowUpRight className="ml-2 w-5 h-5" />
-            </motion.button>
+            <div className="flex flex-wrap justify-center gap-4">
+              <motion.button 
+                onClick={() => setCurrentPage('booking')}
+                className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-8 py-3 rounded-full font-medium text-lg hover:opacity-90 transition-opacity flex items-center"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                Book Your Session
+                <ArrowUpRight className="ml-2 w-5 h-5" />
+              </motion.button>
+              <motion.button 
+                onClick={() => setCurrentPage('services')}
+                className="bg-white text-purple-600 border-2 border-purple-600 px-8 py-3 rounded-full font-medium text-lg hover:bg-purple-50 transition-colors flex items-center"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                View Services
+                <ArrowUpRight className="ml-2 w-5 h-5" />
+              </motion.button>
+              <motion.button 
+                onClick={() => setCurrentPage('pricing')}
+                className="bg-purple-100 text-purple-600 px-8 py-3 rounded-full font-medium text-lg hover:bg-purple-200 transition-colors flex items-center"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                See Pricing
+                <ArrowUpRight className="ml-2 w-5 h-5" />
+              </motion.button>
+            </div>
           </motion.div>
         </div>
       </header>
@@ -76,9 +104,9 @@ function App() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
                 <motion.img 
-                  src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&q=80"
-                  alt="Peaceful meditation session"
-                  className="rounded-lg shadow-xl"
+                  src="https://images.unsplash.com/photo-1593811167562-9cef47bfc4d7?auto=format&fit=crop&q=80"
+                  alt="Serene meditation and mind transformation"
+                  className="rounded-lg shadow-xl object-cover h-[500px] w-full"
                   whileHover={{ scale: 1.02 }}
                   transition={{ duration: 0.3 }}
                 />
@@ -122,6 +150,9 @@ function App() {
         </section>
       </AnimatedSection>
 
+      {/* Benefits Section */}
+      <BenefitsSection />
+
       {/* Services Section */}
       <AnimatedSection>
         <section className="py-20 bg-gradient-to-b from-purple-50 to-indigo-50">
@@ -130,7 +161,7 @@ function App() {
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Services</h2>
               <p className="text-xl text-gray-600">Comprehensive healing solutions tailored to your needs</p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
               <motion.div 
                 className="bg-white rounded-xl shadow-lg p-8 transform hover:-translate-y-1 transition-transform duration-300"
                 whileHover={{ y: -10 }}
@@ -138,8 +169,8 @@ function App() {
                 <div className="w-16 h-16 mx-auto mb-6 bg-purple-100 rounded-full flex items-center justify-center">
                   <Brain className="w-8 h-8 text-purple-600" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Advanced Hypnotherapy</h3>
-                <p className="text-gray-600">Experience deep transformation through guided hypnotic states that reprogram limiting beliefs and behaviors.</p>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4 text-center">Advanced Hypnotherapy</h3>
+                <p className="text-gray-600 text-center">Experience deep transformation through guided hypnotic states that reprogram limiting beliefs and behaviors.</p>
               </motion.div>
               <motion.div 
                 className="bg-white rounded-xl shadow-lg p-8 transform hover:-translate-y-1 transition-transform duration-300"
@@ -148,8 +179,8 @@ function App() {
                 <div className="w-16 h-16 mx-auto mb-6 bg-indigo-100 rounded-full flex items-center justify-center">
                   <Lotus className="w-8 h-8 text-indigo-600" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Mindfulness Training</h3>
-                <p className="text-gray-600">Learn powerful mindfulness techniques to stay present, reduce stress, and enhance mental clarity.</p>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4 text-center">Mindfulness Training</h3>
+                <p className="text-gray-600 text-center">Learn powerful mindfulness techniques to stay present, reduce stress, and enhance mental clarity.</p>
               </motion.div>
               <motion.div 
                 className="bg-white rounded-xl shadow-lg p-8 transform hover:-translate-y-1 transition-transform duration-300"
@@ -158,8 +189,8 @@ function App() {
                 <div className="w-16 h-16 mx-auto mb-6 bg-purple-100 rounded-full flex items-center justify-center">
                   <Rocket className="w-8 h-8 text-purple-600" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Performance Coaching</h3>
-                <p className="text-gray-600">Unlock peak performance through integrated coaching that aligns mind, body, and spirit.</p>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4 text-center">Performance Coaching</h3>
+                <p className="text-gray-600 text-center">Unlock peak performance through integrated coaching that aligns mind, body, and spirit.</p>
               </motion.div>
             </div>
           </div>
@@ -259,9 +290,17 @@ function App() {
       
       <AnimatePresence mode="wait">
         {currentPage === 'home' && <HomePage />}
-        {currentPage === 'services' && <PricingPage />}
+        {currentPage === 'services' && <ServicesPage onPageChange={setCurrentPage} />}
+        {currentPage === 'about' && <AboutPage />}
+        {currentPage === 'pricing' && <PricingPage />}
+        {currentPage === 'hypnotherapy' && <HypnotherapyPage onPageChange={setCurrentPage} />}
+        {currentPage === 'mindfulness' && <MindfulnessPage onPageChange={setCurrentPage} />}
+        {currentPage === 'performance' && <PerformancePage onPageChange={setCurrentPage} />}
+        {currentPage === 'group' && <GroupSessionsPage onPageChange={setCurrentPage} />}
         {currentPage === 'booking' && <BookingPage />}
       </AnimatePresence>
+
+      <Footer onPageChange={setCurrentPage} />
     </div>
   );
 }
