@@ -182,10 +182,29 @@ const Footer: React.FC<FooterProps> = ({ onPageChange }) => {
       {/* Bottom Bar */}
       <div className="border-t border-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-          <div className="flex justify-center items-center">
-            <p className="text-sm">
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            <p className="text-sm mb-3 md:mb-0">
               © {new Date().getFullYear()} Transcendara. All rights reserved.
             </p>
+            <div className="flex space-x-4 text-xs">
+              <a 
+                href="/forms/privacy-policy.html" 
+                className="hover:text-purple-500 transition-colors"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Privacy Policy
+              </a>
+              <span className="text-gray-600">|</span>
+              <a 
+                href="/forms/terms-conditions.html" 
+                className="hover:text-purple-500 transition-colors"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Terms & Conditions
+              </a>
+            </div>
           </div>
         </div>
       </div>
