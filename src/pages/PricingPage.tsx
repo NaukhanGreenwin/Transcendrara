@@ -53,7 +53,7 @@ const PricingCard: React.FC<PricingCardProps> = ({
         whileTap={{ scale: 0.95 }}
         className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-6 py-2 rounded-full font-medium hover:opacity-90 transition-opacity flex items-center"
       >
-        Book Now
+        Contact Us
         <ArrowUpRight className="ml-2 w-4 h-4" />
       </motion.button>
     </div>
