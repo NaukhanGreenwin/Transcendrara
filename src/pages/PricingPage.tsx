@@ -64,10 +64,10 @@ const PricingPage = () => {
   const handleBookNow = () => {
     // Scroll to top smoothly
     window.scrollTo({ top: 0, behavior: 'smooth' });
-    // Navigate to booking page - we'll use the App's state via URL
-    window.location.href = '#booking';
+    // Navigate to contact page
+    window.location.href = '#contact';
     // Trigger a page change event that the parent component can listen for
-    const event = new CustomEvent('pageChange', { detail: { page: 'booking' } });
+    const event = new CustomEvent('pageChange', { detail: { page: 'contact' } });
     window.dispatchEvent(event);
   };
 
