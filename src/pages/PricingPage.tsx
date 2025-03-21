@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Clock, Video, Phone, Package, ArrowUpRight } from 'lucide-react';
+import { Clock, Video, Phone, Package, ArrowUpRight, Users } from 'lucide-react';
 
 interface PricingCardProps {
   title: string;
@@ -84,23 +84,30 @@ const PricingPage = () => {
           <PricingCard
             title="Initial Hypnosis Session"
             duration="1 hour 20 minutes"
-            price="$175"
+            price="$150"
             description="First time hypnosis clients"
             icon={<Video className="w-5 h-5" />}
           />
           <PricingCard
             title="Follow-up Hypnosis Session"
             duration="50 minutes"
-            price="$150"
+            price="$100"
             description="For returning clients"
             icon={<Video className="w-5 h-5" />}
           />
           <PricingCard
             title="Complimentary Phone Consultation"
-            duration="20 minutes"
+            duration="30 minutes"
             price="Free"
             description="One time use only"
             icon={<Phone className="w-5 h-5" />}
+          />
+          <PricingCard
+            title="Group Session Relaxation Hypnotherapy"
+            duration="50 minutes"
+            price="$150"
+            description="Group relaxation session via Zoom"
+            icon={<Users className="w-5 h-5" />}
           />
         </div>
 
@@ -111,7 +118,7 @@ const PricingPage = () => {
             <PricingCard
               title="6 Sessions Package"
               duration="1 hour 20 minutes"
-              price="$850"
+              price="$550"
               description="1 hour 20 min first session booking. Remaining 50 minute bookings will be scheduled after each session."
               icon={<Package className="w-5 h-5" />}
               isPackage
@@ -119,7 +126,7 @@ const PricingPage = () => {
             <PricingCard
               title="12 Sessions Package"
               duration="1 hour 20 minutes"
-              price="$1,600"
+              price="$1,100"
               description="1 hour 20 minute first session booking. Remaining 50 minute bookings will be scheduled after each session."
               icon={<Package className="w-5 h-5" />}
               isPackage
@@ -127,7 +134,7 @@ const PricingPage = () => {
             <PricingCard
               title="20 Sessions Package"
               duration="1 hour 20 minutes"
-              price="$2,500"
+              price="$1,800"
               description="1 hour 20 minute first session booking. Remaining 50 minute bookings will be scheduled after each session."
               icon={<Package className="w-5 h-5" />}
               isPackage

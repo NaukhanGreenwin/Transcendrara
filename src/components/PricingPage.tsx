@@ -1,5 +1,5 @@
 import React from 'react';
-import { Video, Phone, Package } from 'lucide-react';
+import { Video, Phone, Package, Users } from 'lucide-react';
 
 interface PricingOption {
   title: string;
@@ -16,7 +16,7 @@ const PricingPage = () => {
     {
       title: "Initial Hypnosis Session",
       duration: "1 hour 20 minutes",
-      price: 175,
+      price: 150,
       description: "First time hypnosis clients",
       location: "Online via Zoom",
       icon: <Video className="w-6 h-6" />,
@@ -24,18 +24,26 @@ const PricingPage = () => {
     {
       title: "Follow-up Hypnosis Session",
       duration: "50 minutes",
-      price: 150,
+      price: 100,
       description: "For returning clients",
       location: "Online via Zoom",
       icon: <Video className="w-6 h-6" />,
     },
     {
       title: "Complimentary Phone Consultation",
-      duration: "20 minutes",
+      duration: "30 minutes",
       price: 0,
       description: "One time use only",
       location: "Phone call",
       icon: <Phone className="w-6 h-6" />,
+    },
+    {
+      title: "Group Session Relaxation Hypnotherapy",
+      duration: "50 minutes",
+      price: 150,
+      description: "Group relaxation session via Zoom",
+      location: "Online via Zoom",
+      icon: <Users className="w-6 h-6" />,
     },
   ];
 
@@ -43,7 +51,7 @@ const PricingPage = () => {
     {
       title: "6 Sessions Package",
       duration: "1 hour 20 minutes",
-      price: 850,
+      price: 550,
       description: "1 hour 20 min first session booking. Remaining 50 minute bookings will be scheduled after each session.",
       location: "Online via Zoom",
       icon: <Package className="w-6 h-6" />,
@@ -52,7 +60,7 @@ const PricingPage = () => {
     {
       title: "12 Sessions Package",
       duration: "1 hour 20 minutes",
-      price: 1600,
+      price: 1100,
       description: "1 hour 20 minute first session booking. Remaining 50 minute bookings will be scheduled after each session.",
       location: "Online via Zoom",
       icon: <Package className="w-6 h-6" />,
@@ -61,7 +69,7 @@ const PricingPage = () => {
     {
       title: "20 Sessions Package",
       duration: "1 hour 20 minutes",
-      price: 2500,
+      price: 1800,
       description: "1 hour 20 minute first session booking. Remaining 50 minute bookings will be scheduled after each session.",
       location: "Online via Zoom",
       icon: <Package className="w-6 h-6" />,
