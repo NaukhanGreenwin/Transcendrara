@@ -15,7 +15,6 @@ import PerformancePage from './pages/PerformancePage';
 import GroupSessionsPage from './pages/GroupSessionsPage';
 import BenefitsSection from './components/BenefitsSection';
 import AboutPage from './pages/AboutPage';
-import BookingPage from './pages/BookingPage';
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
@@ -33,7 +32,7 @@ function App() {
 
     // Check for hash in URL
     const hash = window.location.hash.replace('#', '');
-    if (hash && ['home', 'services', 'about', 'pricing', 'hypnotherapy', 'mindfulness', 'performance', 'group', 'booking'].includes(hash)) {
+    if (hash && ['home', 'services', 'about', 'pricing', 'hypnotherapy', 'mindfulness', 'performance', 'group'].includes(hash)) {
       setCurrentPage(hash);
     }
 
@@ -311,7 +310,6 @@ function App() {
         {currentPage === 'mindfulness' && <MindfulnessPage onPageChange={setCurrentPage} />}
         {currentPage === 'performance' && <PerformancePage onPageChange={setCurrentPage} />}
         {currentPage === 'group' && <GroupSessionsPage onPageChange={setCurrentPage} />}
-        {currentPage === 'booking' && <BookingPage />}
       </AnimatePresence>
 
       <Footer onPageChange={setCurrentPage} />
