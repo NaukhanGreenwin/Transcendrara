@@ -153,7 +153,7 @@ const PricingPage = () => {
             <PricingCard
               title="20 Sessions Package"
               duration="1 hour 20 minutes"
-              price="$1,800"
+              price="$1,600"
               description="1 hour 20 minute first session booking. Remaining 50 minute bookings will be scheduled after each session."
               icon={<Package className="w-5 h-5" />}
               isPackage
