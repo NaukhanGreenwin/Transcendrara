@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hypnotherapy Intake Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #6a0dad;
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #6a0dad;
+            border-bottom: 1px solid #6a0dad;
+            padding-bottom: 5px;
+            margin-top: 30px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="date"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+        }
+        input[type="checkbox"],
+        input[type="radio"] {
+            margin-right: 5px;
+        }
+        .checkbox-group,
+        .radio-group {
+            margin-bottom: 10px;
+        }
+        .checkbox-option,
+        .radio-option {
+            margin-bottom: 5px;
+        }
+        .scale-container {
+            display: flex;
+            justify-content: space-between;
+            margin: 10px 0;
+        }
+        .scale-option {
+            text-align: center;
+        }
+        .scale-label {
+            display: block;
+            font-size: 0.8em;
+            margin-top: 5px;
+        }
+        .section-note {
+            font-style: italic;
+            color: #666;
+            margin-bottom: 15px;
+        }
+        .consent-item {
+            margin-bottom: 15px;
+            background-color: #f9f9f9;
+            padding: 10px;
+            border-radius: 4px;
+        }
+        .signature-container {
+            margin-top: 30px;
+        }
+        .signature-line {
+            border-top: 1px solid #333;
+            width: 100%;
+            margin-top: 50px;
+            margin-bottom: 5px;
+        }
+        .signature-label {
+            display: flex;
+            justify-content: space-between;
+        }
+        @media print {
+            .no-print {
+                display: none !important;
+            }
+            body {
+                font-size: 12px;
+            }
+            h1 {
+                font-size: 18px;
+            }
+            h2 {
+                font-size: 16px;
+            }
+            input[type="text"],
+            input[type="email"],
+            input[type="tel"],
+            input[type="date"],
+            textarea,
+            select {
+                border: 1px solid #ccc;
+            }
+            .consent-item {
+                background-color: white;
+                border: 1px solid #ddd;
+            }
+        }
+    </style>
+    <script src="convert-pdf.js"></script>
+</head>
+<body>
+    <h1>Hypnotherapy Intake Form</h1>
+    
+    <div class="section-note">
+        Please complete this form to help us better understand your needs and tailor your hypnotherapy experience.
+        All information provided will be kept strictly confidential.
+    </div>
+
+    <h2>Basic Information</h2>
+    <div class="form-group">
+        <label for="fullName">1. Full Name:</label>
+        <input type="text" id="fullName" name="fullName">
+    </div>
+    <div class="form-group">
+        <label for="dob">2. Date of Birth:</label>
+        <input type="date" id="dob" name="dob">
+    </div>
+    <div class="form-group">
+        <label for="phone">3. Phone Number:</label>
+        <input type="tel" id="phone" name="phone">
+    </div>
+    <div class="form-group">
+        <label for="email">4. Email Address:</label>
+        <input type="email" id="email" name="email">
+    </div>
+    <div class="form-group">
+        <label for="contactMethod">5. Preferred Method of Contact:</label>
+        <select id="contactMethod" name="contactMethod">
+            <option value="">Please select</option>
+            <option value="Phone">Phone</option>
+            <option value="Email">Email</option>
+            <option value="WhatsApp">WhatsApp</option>
+            <option value="Text">Text Message</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="emergency">6. Emergency Contact Name & Phone Number:</label>
+        <input type="text" id="emergency" name="emergency">
+    </div>
+
+    <h2>Health & Medical Background</h2>
+    <div class="form-group">
+        <label for="medicalConditions">1. Do you have any medical conditions or mental health diagnoses? (If yes, please specify.)</label>
+        <textarea id="medicalConditions" name="medicalConditions" rows="3"></textarea>
+    </div>
+    <div class="form-group">
+        <label for="medications">2. Are you currently taking any medications? (If yes, please list them.)</label>
+        <textarea id="medications" name="medications" rows="3"></textarea>
+    </div>
+    <div class="form-group">
+        <label>3. Have you ever been diagnosed with epilepsy, schizophrenia, or psychosis?</label>
+        <div class="radio-group">
+            <div class="radio-option">
+                <input type="radio" id="diagnosed_yes" name="diagnosed" value="Yes">
+                <label for="diagnosed_yes">Yes</label>
+            </div>
+            <div class="radio-option">
+                <input type="radio" id="diagnosed_no" name="diagnosed" value="No">
+                <label for="diagnosed_no">No</label>
+            </div>
+        </div>
+        <div class="section-note">
+            Hypnotherapy may not be suitable for individuals with these conditions.
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="mentalHealth">4. Do you experience anxiety, depression, or high stress levels?</label>
+        <textarea id="mentalHealth" name="mentalHealth" rows="3"></textarea>
+    </div>
+    <div class="form-group">
+        <label>5. On a scale of 1-5, how would you rate your current anxiety levels?</label>
+        <div class="scale-container">
+            <div class="scale-option">
+                <input type="radio" id="anxiety_1" name="anxietyLevel" value="1">
+                <label for="anxiety_1">1</label>
+                <span class="scale-label">Very Low</span>
+            </div>
+            <div class="scale-option">
+                <input type="radio" id="anxiety_2" name="anxietyLevel" value="2">
+                <label for="anxiety_2">2</label>
+            </div>
+            <div class="scale-option">
+                <input type="radio" id="anxiety_3" name="anxietyLevel" value="3">
+                <label for="anxiety_3">3</label>
+                <span class="scale-label">Moderate</span>
+            </div>
+            <div class="scale-option">
+                <input type="radio" id="anxiety_4" name="anxietyLevel" value="4">
+                <label for="anxiety_4">4</label>
+            </div>
+            <div class="scale-option">
+                <input type="radio" id="anxiety_5" name="anxietyLevel" value="5">
+                <label for="anxiety_5">5</label>
+                <span class="scale-label">Very High</span>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label>6. Are you currently under the care of a medical or mental health professional?</label>
+        <div class="radio-group">
+            <div class="radio-option">
+                <input type="radio" id="professional_care_yes" name="professionalCare" value="Yes">
+                <label for="professional_care_yes">Yes</label>
+            </div>
+            <div class="radio-option">
+                <input type="radio" id="professional_care_no" name="professionalCare" value="No">
+                <label for="professional_care_no">No</label>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label>7. Have you been advised by a healthcare provider not to undergo hypnotherapy?</label>
+        <div class="radio-group">
+            <div class="radio-option">
+                <input type="radio" id="advised_against_yes" name="advisedAgainst" value="Yes">
+                <label for="advised_against_yes">Yes</label>
+            </div>
+            <div class="radio-option">
+                <input type="radio" id="advised_against_no" name="advisedAgainst" value="No">
+                <label for="advised_against_no">No</label>
+            </div>
+        </div>
+    </div>
+
+    <h2>Lifestyle & Habits</h2>
+    <div class="form-group">
+        <label for="substances">1. Do you use tobacco, alcohol, or any recreational substances?</label>
+        <textarea id="substances" name="substances" rows="3"></textarea>
+    </div>
+    <div class="form-group">
+        <label for="sleepQuality">2. How would you describe your sleep quality?</label>
+        <textarea id="sleepQuality" name="sleepQuality" rows="3"></textarea>
+    </div>
+    <div class="form-group">
+        <label for="relaxationPractices">3. Do you engage in any relaxation or mindfulness practices (e.g., meditation, yoga)?</label>
+        <textarea id="relaxationPractices" name="relaxationPractices" rows="3"></textarea>
+    </div>
+    <div class="form-group">
+        <label for="hobbies">4. What activities or hobbies bring you joy and relaxation?</label>
+        <textarea id="hobbies" name="hobbies" rows="3"></textarea>
+    </div>
+
+    <h2>Personal Preferences for Hypnotherapy Sessions</h2>
+    <div class="form-group">
+        <label>1. Which type of scenery do you find most relaxing? (Select all that apply)</label>
+        <div class="checkbox-group">
+            <div class="checkbox-option">
+                <input type="checkbox" id="scenery_mountains" name="scenery" value="Mountains">
+                <label for="scenery_mountains">Mountains</label>
+            </div>
+            <div class="checkbox-option">
+                <input type="checkbox" id="scenery_beach" name="scenery" value="Beach/Ocean">
+                <label for="scenery_beach">Beach/Ocean</label>
+            </div>
+            <div class="checkbox-option">
+                <input type="checkbox" id="scenery_forest" name="scenery" value="Forest/Nature">
+                <label for="scenery_forest">Forest/Nature</label>
+            </div>
+            <div class="checkbox-option">
+                <input type="checkbox" id="scenery_cityscapes" name="scenery" value="Cityscapes">
+                <label for="scenery_cityscapes">Cityscapes</label>
+            </div>
+            <div class="checkbox-option">
+                <input type="checkbox" id="scenery_fields" name="scenery" value="Open Fields/Meadows">
+                <label for="scenery_fields">Open Fields/Meadows</label>
+            </div>
+            <div class="checkbox-option">
+                <input type="checkbox" id="scenery_other" name="scenery" value="Other">
+                <label for="scenery_other">Other (please specify):</label>
+                <input type="text" id="scenery_other_text" name="scenery_other_text">
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="visualizations">2. Do you prefer guided visualizations based on nature, abstract imagery, or something else?</label>
+        <textarea id="visualizations" name="visualizations" rows="3"></textarea>
+    </div>
+    <div class="form-group">
+        <label for="sounds">3. Are there any sounds or music that help you relax? (e.g., ocean waves, rain, soft piano, silence)</label>
+        <textarea id="sounds" name="sounds" rows="3"></textarea>
+    </div>
+    <div class="form-group">
+        <label for="peacefulPlace">4. Do you have a favorite place (real or imagined) where you feel most at peace?</label>
+        <textarea id="peacefulPlace" name="peacefulPlace" rows="3"></textarea>
+    </div>
+    <div class="form-group">
+        <label for="affirmations">5. Are there any words, phrases, or affirmations that resonate with you?</label>
+        <textarea id="affirmations" name="affirmations" rows="3"></textarea>
+    </div>
+
+    <h2>Goals & Expectations</h2>
+    <div class="form-group">
+        <label>1. What area(s) would you like to focus on during hypnotherapy? (Select all that apply)</label>
+        <div class="checkbox-group">
+            <div class="checkbox-option">
+                <input type="checkbox" id="focus_stress" name="focus" value="Stress Relief">
+                <label for="focus_stress">Stress Relief</label>
+            </div>
+            <div class="checkbox-option">
+                <input type="checkbox" id="focus_confidence" name="focus" value="Confidence & Self-Esteem">
+                <label for="focus_confidence">Confidence & Self-Esteem</label>
+            </div>
+            <div class="checkbox-option">
+                <input type="checkbox" id="focus_procrastination" name="focus" value="Overcoming Procrastination">
+                <label for="focus_procrastination">Overcoming Procrastination</label>
+            </div>
+            <div class="checkbox-option">
+                <input type="checkbox" id="focus_performance" name="focus" value="Peak Performance">
+                <label for="focus_performance">Peak Performance</label>
+            </div>
+            <div class="checkbox-option">
+                <input type="checkbox" id="focus_habits" name="focus" value="Breaking Habits">
+                <label for="focus_habits">Breaking Habits (e.g., smoking, overeating)</label>
+            </div>
+            <div class="checkbox-option">
+                <input type="checkbox" id="focus_phobia" name="focus" value="Phobia/Fear Reduction">
+                <label for="focus_phobia">Phobia/Fear Reduction</label>
+            </div>
+            <div class="checkbox-option">
+                <input type="checkbox" id="focus_other" name="focus" value="Other">
+                <label for="focus_other">Other (please specify):</label>
+                <input type="text" id="focus_other_text" name="focus_other_text">
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="outcomes">2. What specific outcomes would you like to achieve?</label>
+        <textarea id="outcomes" name="outcomes" rows="3"></textarea>
+    </div>
+    <div class="form-group">
+        <label>3. Have you ever tried hypnotherapy before?</label>
+        <div class="radio-group">
+            <div class="radio-option">
+                <input type="radio" id="tried_before_yes" name="triedBefore" value="Yes">
+                <label for="tried_before_yes">Yes</label>
+            </div>
+            <div class="radio-option">
+                <input type="radio" id="tried_before_no" name="triedBefore" value="No">
+                <label for="tried_before_no">No</label>
+            </div>
+        </div>
+        <label for="priorExperience">If yes, what was your experience?</label>
+        <textarea id="priorExperience" name="priorExperience" rows="3"></textarea>
+    </div>
+    <div class="form-group">
+        <label>4. On a scale of 1-10, how committed are you to making a change in this area of your life?</label>
+        <div class="scale-container">
+            <div class="scale-option">
+                <input type="radio" id="commitment_1" name="commitment" value="1">
+                <label for="commitment_1">1</label>
+            </div>
+            <div class="scale-option">
+                <input type="radio" id="commitment_2" name="commitment" value="2">
+                <label for="commitment_2">2</label>
+            </div>
+            <div class="scale-option">
+                <input type="radio" id="commitment_3" name="commitment" value="3">
+                <label for="commitment_3">3</label>
+            </div>
+            <div class="scale-option">
+                <input type="radio" id="commitment_4" name="commitment" value="4">
+                <label for="commitment_4">4</label>
+            </div>
+            <div class="scale-option">
+                <input type="radio" id="commitment_5" name="commitment" value="5">
+                <label for="commitment_5">5</label>
+            </div>
+            <div class="scale-option">
+                <input type="radio" id="commitment_6" name="commitment" value="6">
+                <label for="commitment_6">6</label>
+            </div>
+            <div class="scale-option">
+                <input type="radio" id="commitment_7" name="commitment" value="7">
+                <label for="commitment_7">7</label>
+            </div>
+            <div class="scale-option">
+                <input type="radio" id="commitment_8" name="commitment" value="8">
+                <label for="commitment_8">8</label>
+            </div>
+            <div class="scale-option">
+                <input type="radio" id="commitment_9" name="commitment" value="9">
+                <label for="commitment_9">9</label>
+            </div>
+            <div class="scale-option">
+                <input type="radio" id="commitment_10" name="commitment" value="10">
+                <label for="commitment_10">10</label>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="challenges">5. What challenges have you faced in making these changes on your own?</label>
+        <textarea id="challenges" name="challenges" rows="3"></textarea>
+    </div>
+
+    <h2>Consent & Liability Waiver</h2>
+    <div class="form-group">
+        <div class="consent-item">
+            <div class="checkbox-option">
+                <input type="checkbox" id="consent_1" name="consent_1" required>
+                <label for="consent_1">1. I understand that hypnotherapy is not a substitute for medical or psychological treatment and is not intended to diagnose, treat, or cure any condition.</label>
+            </div>
+        </div>
+        <div class="consent-item">
+            <div class="checkbox-option">
+                <input type="checkbox" id="consent_2" name="consent_2" required>
+                <label for="consent_2">2. I acknowledge that results vary from person to person and that success is dependent on my own participation and commitment.</label>
+            </div>
+        </div>
+        <div class="consent-item">
+            <div class="checkbox-option">
+                <input type="checkbox" id="consent_3" name="consent_3" required>
+                <label for="consent_3">3. I confirm that I am voluntarily participating in hypnotherapy sessions and assume full responsibility for my physical, emotional, and mental well-being.</label>
+            </div>
+        </div>
+        <div class="consent-item">
+            <div class="checkbox-option">
+                <input type="checkbox" id="consent_4" name="consent_4" required>
+                <label for="consent_4">4. I release the hypnotherapist from any claims, liabilities, or damages that may arise directly or indirectly from hypnotherapy sessions.</label>
+            </div>
+        </div>
+        <div class="consent-item">
+            <div class="checkbox-option">
+                <input type="checkbox" id="consent_5" name="consent_5">
+                <label for="consent_5">5. I consent to having my sessions recorded for training and development purposes.</label>
+            </div>
+        </div>
+        <div class="consent-item">
+            <div class="checkbox-option">
+                <input type="checkbox" id="consent_6" name="consent_6">
+                <label for="consent_6">6. I give permission for anonymous case studies to be used for educational or marketing purposes (with identifying details removed).</label>
+            </div>
+        </div>
+        <div class="consent-item">
+            <div class="checkbox-option">
+                <input type="checkbox" id="consent_7" name="consent_7" required>
+                <label for="consent_7">7. I acknowledge that hypnotherapy services are non-refundable, and any rescheduling or cancellations must be made at least 24 hours in advance.</label>
+            </div>
+        </div>
+    </div>
+
+    <div class="signature-container">
+        <div class="form-group">
+            <label for="clientSignature">Signature:</label>
+            <input type="text" id="clientSignature" name="clientSignature" required>
+        </div>
+        <div class="form-group">
+            <label for="signatureDate">Date:</label>
+            <input type="date" id="signatureDate" name="signatureDate" required>
+        </div>
+        <div class="signature-line"></div>
+        <div class="signature-label">
+            <span>Client Signature</span>
+            <span>Date</span>
+        </div>
+    </div>
+</body>
+</html> 
