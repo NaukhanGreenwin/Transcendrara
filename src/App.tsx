@@ -118,8 +118,8 @@ function App() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
                 <motion.img 
-                  src="https://images.unsplash.com/photo-1606676539940-12768ce0e762?auto=format&fit=crop&q=80"
-                  alt="Serene water with sunset reflections"
+                  src="https://images.unsplash.com/photo-1593811167562-9cef47bfc4d7?auto=format&fit=crop&q=80"
+                  alt="Serene meditation and mind transformation"
                   className="rounded-lg shadow-xl object-cover h-[500px] w-full"
                   whileHover={{ scale: 1.02 }}
                   transition={{ duration: 0.3 }}
