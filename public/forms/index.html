@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hypnotherapy Forms</title>
+    <title>Client Forms & Documents - Transcendara</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -12,62 +12,111 @@
             max-width: 800px;
             margin: 0 auto;
             padding: 20px;
+            background-color: #f9f7ff;
         }
         h1 {
             text-align: center;
             color: #6a0dad;
             margin-bottom: 30px;
+            border-bottom: 2px solid #6a0dad;
+            padding-bottom: 10px;
         }
-        .card {
-            background-color: #f9f9f9;
-            border-radius: 8px;
+        .section {
+            background-color: white;
+            border-radius: 10px;
             padding: 20px;
-            margin-bottom: 20px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
-        .card h2 {
+        h2 {
             color: #6a0dad;
             margin-top: 0;
         }
-        .card p {
-            margin-bottom: 20px;
+        p {
+            margin-bottom: 15px;
         }
-        .btn {
+        .form-link {
             display: inline-block;
+            margin: 10px 0;
+            padding: 12px 20px;
             background-color: #6a0dad;
             color: white;
-            padding: 10px 20px;
             text-decoration: none;
-            border-radius: 4px;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        .form-link:hover {
+            background-color: #5a0b8d;
+        }
+        .text-link {
+            color: #6a0dad;
+            text-decoration: none;
             font-weight: bold;
         }
-        .btn:hover {
-            background-color: #5a0b8d;
+        .text-link:hover {
+            text-decoration: underline;
+        }
+        .return-link {
+            display: inline-block;
+            margin-top: 20px;
+            color: #6a0dad;
+            text-decoration: none;
+        }
+        .return-link:hover {
+            text-decoration: underline;
+        }
+        .documents-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .documents-list li {
+            margin-bottom: 15px;
+            padding-left: 25px;
+            position: relative;
+        }
+        .documents-list li:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #6a0dad;
+            font-size: 20px;
         }
     </style>
 </head>
 <body>
-    <h1>Hypnotherapy Forms</h1>
+    <h1>Client Forms & Documents</h1>
     
-    <div class="card">
+    <div class="section">
         <h2>Client Intake Form</h2>
-        <p>Please complete this form prior to your first appointment to help us better understand your needs and tailor your hypnotherapy experience.</p>
-        <a href="intake-form.html" class="btn">Open Intake Form</a>
+        <p>Before your first hypnotherapy session, please complete our client intake form. This comprehensive form helps us understand your needs and goals, allowing us to provide you with the most effective and personalized experience.</p>
+        <p>You can complete the form online and download it as a PDF to submit before your session.</p>
+        <a href="intake-form.html" class="form-link">Complete Intake Form</a>
     </div>
     
-    <div class="card">
-        <h2>How to Use These Forms</h2>
+    <div class="section">
+        <h2>Legal Documents</h2>
+        <p>For transparency and to ensure you understand our policies, please review our legal documents:</p>
+        <ul class="documents-list">
+            <li>
+                <a href="privacy-policy.html" class="text-link">Privacy Policy</a> - Information about how we collect, use, and protect your personal data, in compliance with PIPEDA and GDPR.
+            </li>
+            <li>
+                <a href="terms-conditions.html" class="text-link">Terms and Conditions</a> - Details about our services, booking policies, cancellations, and other important information.
+            </li>
+        </ul>
+        <p>By booking and participating in our services, you acknowledge that you have read and agreed to these documents.</p>
+    </div>
+    
+    <div class="section">
+        <h2>Questions?</h2>
+        <p>If you have any questions about our forms or policies, please don't hesitate to contact us:</p>
         <p>
-            1. Click on the form link above<br>
-            2. Fill out all the required information<br>
-            3. Click the "Download as PDF" button at the top or bottom of the form<br>
-            4. Print the PDF or save it to your device<br>
-            5. Submit the completed form via email or bring it to your first appointment
+            Email: info@transcendara.com<br>
+            Phone: +1 (905) 555-5555
         </p>
     </div>
     
-    <div class="card">
-        <p><a href="/" style="color: #6a0dad;">← Return to Home Page</a></p>
-    </div>
+    <a href="/" class="return-link">← Return to Home Page</a>
 </body>
 </html> 
