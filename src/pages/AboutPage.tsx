@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Languages, Mail, Phone, Calendar, Star, Quote } from 'lucide-react';
+import { Languages, Mail, Calendar, Star, Quote } from 'lucide-react';
 
 const AboutPage: React.FC = () => {
   return (
@@ -67,10 +67,6 @@ const AboutPage: React.FC = () => {
                 <div className="flex items-center space-x-3 text-gray-700">
                   <Mail className="w-5 h-5 text-purple-600" />
                   <span>contact@transcendara.com</span>
-                </div>
-                <div className="flex items-center space-x-3 text-gray-700">
-                  <Phone className="w-5 h-5 text-purple-600" />
-                  <span>+1 (555) 123-4567</span>
                 </div>
                 <div className="flex items-center space-x-3 text-gray-700">
                   <Calendar className="w-5 h-5 text-purple-600" />

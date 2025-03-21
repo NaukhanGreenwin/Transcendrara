@@ -1,5 +1,5 @@
 import React from 'react';
-import { Facebook, Instagram, Mail, MapPin, Phone, Sparkles } from 'lucide-react';
+import { Facebook, Instagram, Mail, MapPin, Sparkles } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 interface FooterProps {
@@ -106,8 +106,9 @@ const Footer: React.FC<FooterProps> = ({ onPageChange }) => {
               </li>
               <li className="mb-2">
                 <motion.a
-                  href="/forms/"
+                  href="/forms.html"
                   target="_blank"
+                  rel="noopener noreferrer"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   className="text-gray-200 hover:text-white transition-colors"
@@ -166,10 +167,6 @@ const Footer: React.FC<FooterProps> = ({ onPageChange }) => {
                 <MapPin className="w-5 h-5 text-purple-500" />
                 <span className="text-sm">Toronto, ON</span>
               </li>
-              <li className="flex items-center space-x-3">
-                <Phone className="w-5 h-5 text-purple-500" />
-                <span className="text-sm">+1 (905) 555-5555</span>  
-              </li> 
               <li className="flex items-center space-x-3">  
                 <Mail className="w-5 h-5 text-purple-500" />
                 <span className="text-sm">contact@transcendara.com</span>
