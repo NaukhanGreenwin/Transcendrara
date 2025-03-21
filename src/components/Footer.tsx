@@ -94,6 +94,27 @@ const Footer: React.FC<FooterProps> = ({ onPageChange }) => {
                   Book a Session
                 </motion.button>
               </li>
+              <li className="mb-2">
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="text-gray-200 hover:text-white transition-colors"
+                  onClick={() => handlePageChange('testimonials')}
+                >
+                  Testimonials
+                </motion.button>
+              </li>
+              <li className="mb-2">
+                <motion.a
+                  href="/forms/"
+                  target="_blank"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="text-gray-200 hover:text-white transition-colors"
+                >
+                  Client Forms
+                </motion.a>
+              </li>
             </ul>
           </div>
 
