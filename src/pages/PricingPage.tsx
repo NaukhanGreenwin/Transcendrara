@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Clock, MapPin, Video, Phone, Package, ArrowUpRight } from 'lucide-react';
+import { Clock, Video, Phone, Package, ArrowUpRight } from 'lucide-react';
 
 interface PricingCardProps {
   title: string;
@@ -76,36 +76,23 @@ const PricingPage = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
           >
-            Choose the session that best fits your needs
+            All sessions are conducted virtually via Zoom
           </motion.p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
           <PricingCard
-            title="Brentwood, CA In-Office Session"
-            duration="50 minutes"
-            price="$275"
-            description="Appointments available in the Brentwood neighborhood of Los Angeles, CA."
-            icon={<MapPin className="w-5 h-5" />}
-          />
-          <PricingCard
-            title="Brentwood, CA Initial Appointment"
-            duration="1 hour 20 minutes"
-            price="$275"
-            description="Appointments available in the Brentwood neighborhood of Los Angeles, CA."
-            icon={<MapPin className="w-5 h-5" />}
-          />
-          <PricingCard
-            title="Initial Zoom Hypnosis Session"
+            title="Initial Hypnosis Session"
             duration="1 hour 20 minutes"
             price="$175"
             description="First time hypnosis clients"
             icon={<Video className="w-5 h-5" />}
           />
           <PricingCard
-            title="50 minute Zoom Hypnosis Session"
+            title="Follow-up Hypnosis Session"
             duration="50 minutes"
             price="$150"
+            description="For returning clients"
             icon={<Video className="w-5 h-5" />}
           />
           <PricingCard
@@ -118,11 +105,11 @@ const PricingPage = () => {
         </div>
 
         {/* Packages */}
-        <div>
+        <div className="mt-16">
           <h2 className="text-2xl font-semibold text-gray-900 mb-8">Packages</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <PricingCard
-              title="6 Zoom Sessions Package"
+              title="6 Sessions Package"
               duration="1 hour 20 minutes"
               price="$850"
               description="1 hour 20 min first session booking. Remaining 50 minute bookings will be scheduled after each session."
@@ -130,7 +117,7 @@ const PricingPage = () => {
               isPackage
             />
             <PricingCard
-              title="12 Zoom Sessions Package"
+              title="12 Sessions Package"
               duration="1 hour 20 minutes"
               price="$1,600"
               description="1 hour 20 minute first session booking. Remaining 50 minute bookings will be scheduled after each session."
@@ -138,7 +125,7 @@ const PricingPage = () => {
               isPackage
             />
             <PricingCard
-              title="20 Zoom Sessions Package"
+              title="20 Sessions Package"
               duration="1 hour 20 minutes"
               price="$2,500"
               description="1 hour 20 minute first session booking. Remaining 50 minute bookings will be scheduled after each session."

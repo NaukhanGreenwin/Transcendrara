@@ -1,5 +1,5 @@
 import React from 'react';
-import { MapPin, Video, Phone, Package } from 'lucide-react';
+import { Video, Phone, Package } from 'lucide-react';
 
 interface PricingOption {
   title: string;
@@ -14,21 +14,7 @@ interface PricingOption {
 const PricingPage = () => {
   const sessions: PricingOption[] = [
     {
-      title: "Brentwood, CA In-Office Session",
-      duration: "50 minutes",
-      price: 275,
-      location: "Brentwood, Los Angeles, CA",
-      icon: <MapPin className="w-6 h-6" />,
-    },
-    {
-      title: "Brentwood, CA Initial Appointment",
-      duration: "1 hour 20 minutes",
-      price: 275,
-      location: "Brentwood, Los Angeles, CA",
-      icon: <MapPin className="w-6 h-6" />,
-    },
-    {
-      title: "Initial Zoom Hypnosis Session",
+      title: "Initial Hypnosis Session",
       duration: "1 hour 20 minutes",
       price: 175,
       description: "First time hypnosis clients",
@@ -36,9 +22,10 @@ const PricingPage = () => {
       icon: <Video className="w-6 h-6" />,
     },
     {
-      title: "50 minute Zoom Hypnosis Session",
+      title: "Follow-up Hypnosis Session",
       duration: "50 minutes",
       price: 150,
+      description: "For returning clients",
       location: "Online via Zoom",
       icon: <Video className="w-6 h-6" />,
     },
@@ -54,16 +41,7 @@ const PricingPage = () => {
 
   const packages: PricingOption[] = [
     {
-      title: "12 Zoom Sessions Package",
-      duration: "1 hour 20 minutes",
-      price: 1600,
-      description: "1 hour 20 minute first session booking. Remaining 50 minute bookings will be scheduled after each session.",
-      location: "Online via Zoom",
-      icon: <Package className="w-6 h-6" />,
-      isPackage: true,
-    },
-    {
-      title: "6 Zoom Sessions Package",
+      title: "6 Sessions Package",
       duration: "1 hour 20 minutes",
       price: 850,
       description: "1 hour 20 min first session booking. Remaining 50 minute bookings will be scheduled after each session.",
@@ -72,7 +50,16 @@ const PricingPage = () => {
       isPackage: true,
     },
     {
-      title: "20 Zoom Sessions Package",
+      title: "12 Sessions Package",
+      duration: "1 hour 20 minutes",
+      price: 1600,
+      description: "1 hour 20 minute first session booking. Remaining 50 minute bookings will be scheduled after each session.",
+      location: "Online via Zoom",
+      icon: <Package className="w-6 h-6" />,
+      isPackage: true,
+    },
+    {
+      title: "20 Sessions Package",
       duration: "1 hour 20 minutes",
       price: 2500,
       description: "1 hour 20 minute first session booking. Remaining 50 minute bookings will be scheduled after each session.",
@@ -114,7 +101,7 @@ const PricingPage = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">Hypnosis Sessions & Packages</h1>
-          <p className="text-xl text-gray-600">Choose the perfect option for your transformation journey</p>
+          <p className="text-xl text-gray-600">All sessions are conducted virtually via Zoom</p>
         </div>
 
         <div className="mb-20">
