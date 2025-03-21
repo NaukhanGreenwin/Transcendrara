@@ -9,6 +9,7 @@ interface PricingCardProps {
   description?: string;
   icon: React.ReactNode;
   isPackage?: boolean;
+  onBookNow: () => void;
 }
 
 const PricingCard: React.FC<PricingCardProps> = ({ 
@@ -17,7 +18,8 @@ const PricingCard: React.FC<PricingCardProps> = ({
   price, 
   description, 
   icon,
-  isPackage 
+  isPackage,
+  onBookNow
 }) => (
   <motion.div
     initial={{ opacity: 0, y: 20 }}
@@ -46,6 +48,7 @@ const PricingCard: React.FC<PricingCardProps> = ({
     )}
     <div className="flex justify-end">
       <motion.button
+        onClick={onBookNow}
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
         className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-6 py-2 rounded-full font-medium hover:opacity-90 transition-opacity flex items-center"
@@ -58,6 +61,16 @@ const PricingCard: React.FC<PricingCardProps> = ({
 );
 
 const PricingPage = () => {
+  const handleBookNow = () => {
+    // Scroll to top smoothly
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    // Navigate to booking page - we'll use the App's state via URL
+    window.location.href = '#booking';
+    // Trigger a page change event that the parent component can listen for
+    const event = new CustomEvent('pageChange', { detail: { page: 'booking' } });
+    window.dispatchEvent(event);
+  };
+
   return (
     <div className="pt-32 pb-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
@@ -82,11 +95,12 @@ const PricingPage = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
           <PricingCard
-            title="Complimentary Phone Consultation"
+            title="Complimentary Initial Consultation"
             duration="30 minutes"
             price="Free"
             description="One time use only"
             icon={<Phone className="w-5 h-5" />}
+            onBookNow={handleBookNow}
           />
           <PricingCard
             title="Initial Hypnosis Session"
@@ -94,6 +108,7 @@ const PricingPage = () => {
             price="$150"
             description="First time hypnosis clients"
             icon={<Video className="w-5 h-5" />}
+            onBookNow={handleBookNow}
           />
           <PricingCard
             title="Follow-up Hypnosis Session"
@@ -101,6 +116,7 @@ const PricingPage = () => {
             price="$100"
             description="For returning clients"
             icon={<Video className="w-5 h-5" />}
+            onBookNow={handleBookNow}
           />
           <PricingCard
             title="Group Session Relaxation Hypnotherapy"
@@ -108,6 +124,7 @@ const PricingPage = () => {
             price="$150"
             description="Group relaxation session via Zoom"
             icon={<Users className="w-5 h-5" />}
+            onBookNow={handleBookNow}
           />
         </div>
 
@@ -122,6 +139,7 @@ const PricingPage = () => {
               description="1 hour 20 min first session booking. Remaining 50 minute bookings will be scheduled after each session."
               icon={<Package className="w-5 h-5" />}
               isPackage
+              onBookNow={handleBookNow}
             />
             <PricingCard
               title="12 Sessions Package"
@@ -130,6 +148,7 @@ const PricingPage = () => {
               description="1 hour 20 minute first session booking. Remaining 50 minute bookings will be scheduled after each session."
               icon={<Package className="w-5 h-5" />}
               isPackage
+              onBookNow={handleBookNow}
             />
             <PricingCard
               title="20 Sessions Package"
@@ -138,6 +157,7 @@ const PricingPage = () => {
               description="1 hour 20 minute first session booking. Remaining 50 minute bookings will be scheduled after each session."
               icon={<Package className="w-5 h-5" />}
               isPackage
+              onBookNow={handleBookNow}
             />
           </div>
         </div>
