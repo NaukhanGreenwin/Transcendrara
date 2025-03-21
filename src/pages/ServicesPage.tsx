@@ -74,32 +74,32 @@ const ServicesPage = ({ onPageChange }: { onPageChange: (page: string) => void }
         </AnimatedSection>
 
         <AnimatedSection>
-          <div className="mt-16 max-w-4xl mx-auto">
+          <div className="mt-16 max-w-4xl mx-auto px-4 sm:px-6">
             <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">Areas We Can Help With:</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-center">
-              <div className="bg-white rounded-xl shadow-sm p-6 hover:shadow-md transition-shadow">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 text-center">
+              <div className="bg-white rounded-xl shadow-sm p-4 sm:p-6 hover:shadow-md transition-shadow">
                 <h3 className="text-lg font-semibold text-purple-600 mb-2">Stress Relief</h3>
               </div>
-              <div className="bg-white rounded-xl shadow-sm p-6 hover:shadow-md transition-shadow">
+              <div className="bg-white rounded-xl shadow-sm p-4 sm:p-6 hover:shadow-md transition-shadow">
                 <h3 className="text-lg font-semibold text-purple-600 mb-2">Confidence & Self-Esteem</h3>
               </div>
-              <div className="bg-white rounded-xl shadow-sm p-6 hover:shadow-md transition-shadow">
+              <div className="bg-white rounded-xl shadow-sm p-4 sm:p-6 hover:shadow-md transition-shadow">
                 <h3 className="text-lg font-semibold text-purple-600 mb-2">Overcoming Procrastination</h3>
               </div>
-              <div className="bg-white rounded-xl shadow-sm p-6 hover:shadow-md transition-shadow">
+              <div className="bg-white rounded-xl shadow-sm p-4 sm:p-6 hover:shadow-md transition-shadow">
                 <h3 className="text-lg font-semibold text-purple-600 mb-2">Peak Performance</h3>
               </div>
-              <div className="bg-white rounded-xl shadow-sm p-6 hover:shadow-md transition-shadow">
+              <div className="bg-white rounded-xl shadow-sm p-4 sm:p-6 hover:shadow-md transition-shadow">
                 <h3 className="text-lg font-semibold text-purple-600 mb-2">Breaking Habits</h3>
                 <p className="text-sm text-gray-600">(e.g., smoking, overeating)</p>
               </div>
-              <div className="bg-white rounded-xl shadow-sm p-6 hover:shadow-md transition-shadow">
+              <div className="bg-white rounded-xl shadow-sm p-4 sm:p-6 hover:shadow-md transition-shadow">
                 <h3 className="text-lg font-semibold text-purple-600 mb-2">Phobia/Fear Reduction</h3>
               </div>
-              <div className="bg-white rounded-xl shadow-sm p-6 hover:shadow-md transition-shadow">
+              <div className="bg-white rounded-xl shadow-sm p-4 sm:p-6 hover:shadow-md transition-shadow">
                 <h3 className="text-lg font-semibold text-purple-600 mb-2">Anxiety</h3>
               </div>
-              <div className="bg-white rounded-xl shadow-sm p-6 hover:shadow-md transition-shadow">
+              <div className="bg-white rounded-xl shadow-sm p-4 sm:p-6 hover:shadow-md transition-shadow">
                 <h3 className="text-lg font-semibold text-purple-600 mb-2">Weight Loss</h3>
               </div>
             </div>
@@ -107,12 +107,12 @@ const ServicesPage = ({ onPageChange }: { onPageChange: (page: string) => void }
         </AnimatedSection>
 
         <AnimatedSection>
-          <div className="mt-20 text-center">
+          <div className="mt-20 text-center px-4 sm:px-0">
             <motion.a
               href="https://calendly.com/marriyam83/30min?month=2025-03"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-8 py-3 rounded-full font-medium text-lg inline-flex items-center"
+              className="w-full sm:w-auto bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-6 sm:px-8 py-3 rounded-full font-medium text-lg inline-flex items-center justify-center"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
