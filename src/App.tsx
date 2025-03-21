@@ -250,15 +250,17 @@ function App() {
                   Ready to begin your transformative journey? Book your session now and 
                   take the first step towards positive change.
                 </p>
-                <motion.button 
-                  onClick={() => setCurrentPage('booking')}
+                <motion.a 
+                  href="https://calendly.com/marriyam83/30min?month=2025-03"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-full bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-8 py-3 rounded-full font-medium text-lg hover:opacity-90 transition-opacity flex items-center justify-center"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                 >
                   Book Your Session
                   <ArrowUpRight className="ml-2 w-5 h-5" />
-                </motion.button>
+                </motion.a>
               </div>
             </div>
           </div>
@@ -282,15 +284,17 @@ function App() {
               Take the first step towards your transformation journey. 
               Book your session today.
             </p>
-            <motion.button 
-              onClick={() => setCurrentPage('booking')}
+            <motion.a 
+              href="https://calendly.com/marriyam83/30min?month=2025-03"
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-8 py-3 rounded-full font-medium text-lg hover:opacity-90 transition-opacity inline-flex items-center"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
               Book Your Session
               <ArrowUpRight className="ml-2 w-5 h-5" />
-            </motion.button>
+            </motion.a>
           </div>
         </section>
       </AnimatedSection>

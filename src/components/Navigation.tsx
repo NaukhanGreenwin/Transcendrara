@@ -124,14 +124,16 @@ const Navigation: React.FC<NavigationProps> = ({ currentPage, onPageChange }) =>
               </AnimatePresence>
             </div>
 
-            <motion.button
-              onClick={() => onPageChange('booking')}
+            <motion.a
+              href="https://calendly.com/marriyam83/30min?month=2025-03"
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-6 py-2 rounded-full font-medium hover:opacity-90 transition-opacity"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
               Book Now
-            </motion.button>
+            </motion.a>
           </div>
 
           {/* Mobile Menu Button */}

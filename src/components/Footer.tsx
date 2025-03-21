@@ -86,6 +86,17 @@ const Footer: React.FC<FooterProps> = ({ onPageChange }) => {
                 </motion.button>
               </li>
               <li>
+                <motion.a
+                  href="https://calendly.com/marriyam83/30min?month=2025-03"
+                  target="_blank"
+                  rel="noopener noreferrer" 
+                  className="text-gray-300 hover:text-purple-500 transition-colors text-sm inline-flex items-center"
+                  whileHover={{ x: 5 }}
+                >
+                  Book Now
+                </motion.a>
+              </li>
+              <li>
                 <motion.button
                   onClick={() => handlePageChange('testimonials')}
                   className="text-gray-300 hover:text-purple-500 transition-colors text-sm"
