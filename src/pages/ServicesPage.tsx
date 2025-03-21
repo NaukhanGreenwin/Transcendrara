@@ -79,28 +79,36 @@ const ServicesPage = ({ onPageChange }: { onPageChange: (page: string) => void }
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 text-center">
               <div className="bg-white rounded-xl shadow-sm p-4 sm:p-6 hover:shadow-md transition-shadow">
                 <h3 className="text-lg font-semibold text-purple-600 mb-2">Stress Relief</h3>
+                <p className="text-sm text-gray-600">Release tension and find calm through effective hypnotherapy techniques.</p>
               </div>
               <div className="bg-white rounded-xl shadow-sm p-4 sm:p-6 hover:shadow-md transition-shadow">
                 <h3 className="text-lg font-semibold text-purple-600 mb-2">Confidence & Self-Esteem</h3>
+                <p className="text-sm text-gray-600">Build unshakable confidence and embrace your true worth.</p>
               </div>
               <div className="bg-white rounded-xl shadow-sm p-4 sm:p-6 hover:shadow-md transition-shadow">
                 <h3 className="text-lg font-semibold text-purple-600 mb-2">Overcoming Procrastination</h3>
+                <p className="text-sm text-gray-600">Transform hesitation into action and achieve your goals.</p>
               </div>
               <div className="bg-white rounded-xl shadow-sm p-4 sm:p-6 hover:shadow-md transition-shadow">
                 <h3 className="text-lg font-semibold text-purple-600 mb-2">Peak Performance</h3>
+                <p className="text-sm text-gray-600">Reach your highest potential in work, sports, and creative pursuits.</p>
               </div>
               <div className="bg-white rounded-xl shadow-sm p-4 sm:p-6 hover:shadow-md transition-shadow">
                 <h3 className="text-lg font-semibold text-purple-600 mb-2">Breaking Habits</h3>
+                <p className="text-sm text-gray-600">Release unwanted patterns and behaviors for lasting change.</p>
                 <p className="text-sm text-gray-600">(e.g., smoking, overeating)</p>
               </div>
               <div className="bg-white rounded-xl shadow-sm p-4 sm:p-6 hover:shadow-md transition-shadow">
                 <h3 className="text-lg font-semibold text-purple-600 mb-2">Phobia/Fear Reduction</h3>
+                <p className="text-sm text-gray-600">Overcome limiting fears and live with greater freedom.</p>
               </div>
               <div className="bg-white rounded-xl shadow-sm p-4 sm:p-6 hover:shadow-md transition-shadow">
                 <h3 className="text-lg font-semibold text-purple-600 mb-2">Anxiety</h3>
+                <p className="text-sm text-gray-600">Find relief from anxiety and develop lasting coping skills.</p>
               </div>
               <div className="bg-white rounded-xl shadow-sm p-4 sm:p-6 hover:shadow-md transition-shadow">
                 <h3 className="text-lg font-semibold text-purple-600 mb-2">Weight Loss</h3>
+                <p className="text-sm text-gray-600">Transform your relationship with food and achieve sustainable results.</p>
               </div>
             </div>
           </div>
