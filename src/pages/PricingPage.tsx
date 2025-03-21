@@ -49,9 +49,9 @@ const PricingCard: React.FC<PricingCardProps> = ({
     <div className="flex justify-end">
       <motion.button
         onClick={onBookNow}
-        whileHover={{ scale: 1.05 }}
+        whileHover={{ scale: 1.05, x: 5 }}
         whileTap={{ scale: 0.95 }}
-        className="hover:text-purple-500 transition-colors text-sm flex items-center"
+        className="text-gray-600 hover:text-purple-500 transition-colors text-sm flex items-center"
       >
         Contact Us
         <ArrowUpRight className="ml-2 w-4 h-4" />

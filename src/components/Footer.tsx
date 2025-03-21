@@ -61,7 +61,7 @@ const Footer: React.FC<FooterProps> = ({ onPageChange }) => {
               <li>
                 <motion.button 
                   onClick={() => handlePageChange('about')}
-                  className="hover:text-purple-500 transition-colors text-sm"
+                  className="text-gray-300 hover:text-purple-500 transition-colors text-sm"
                   whileHover={{ x: 5 }}
                 >
                   About Us
@@ -70,7 +70,7 @@ const Footer: React.FC<FooterProps> = ({ onPageChange }) => {
               <li>
                 <motion.button 
                   onClick={() => handlePageChange('services')}
-                  className="hover:text-purple-500 transition-colors text-sm"
+                  className="text-gray-300 hover:text-purple-500 transition-colors text-sm"
                   whileHover={{ x: 5 }}
                 >
                   Our Services
@@ -79,7 +79,7 @@ const Footer: React.FC<FooterProps> = ({ onPageChange }) => {
               <li>
                 <motion.button 
                   onClick={() => handlePageChange('pricing')}
-                  className="hover:text-purple-500 transition-colors text-sm"
+                  className="text-gray-300 hover:text-purple-500 transition-colors text-sm"
                   whileHover={{ x: 5 }}
                 >
                   Pricing
@@ -88,7 +88,7 @@ const Footer: React.FC<FooterProps> = ({ onPageChange }) => {
               <li>
                 <motion.button
                   onClick={() => handlePageChange('testimonials')}
-                  className="hover:text-purple-500 transition-colors text-sm"
+                  className="text-gray-300 hover:text-purple-500 transition-colors text-sm"
                   whileHover={{ x: 5 }}
                 >
                   Testimonials
@@ -99,7 +99,7 @@ const Footer: React.FC<FooterProps> = ({ onPageChange }) => {
                   href="/forms.html"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-purple-500 transition-colors text-sm"
+                  className="text-gray-300 hover:text-purple-500 transition-colors text-sm"
                   whileHover={{ x: 5 }}
                 >
                   Client Forms
@@ -118,7 +118,7 @@ const Footer: React.FC<FooterProps> = ({ onPageChange }) => {
               <li>
                 <motion.button 
                   onClick={() => handlePageChange('hypnotherapy')}
-                  className="hover:text-purple-500 transition-colors text-sm"
+                  className="text-gray-300 hover:text-purple-500 transition-colors text-sm"
                   whileHover={{ x: 5 }}
                 >
                   Advanced Hypnotherapy
@@ -127,7 +127,7 @@ const Footer: React.FC<FooterProps> = ({ onPageChange }) => {
               <li>
                 <motion.button 
                   onClick={() => handlePageChange('mindfulness')}
-                  className="hover:text-purple-500 transition-colors text-sm"
+                  className="text-gray-300 hover:text-purple-500 transition-colors text-sm"
                   whileHover={{ x: 5 }}
                 >
                   Mindfulness Training
@@ -136,7 +136,7 @@ const Footer: React.FC<FooterProps> = ({ onPageChange }) => {
               <li>
                 <motion.button 
                   onClick={() => handlePageChange('performance')}
-                  className="hover:text-purple-500 transition-colors text-sm"
+                  className="text-gray-300 hover:text-purple-500 transition-colors text-sm"
                   whileHover={{ x: 5 }}
                 >
                   Performance Coaching
@@ -175,7 +175,7 @@ const Footer: React.FC<FooterProps> = ({ onPageChange }) => {
             <div className="flex space-x-4 text-xs">
               <a 
                 href="/forms/privacy-policy.html" 
-                className="hover:text-purple-500 transition-colors"
+                className="text-gray-300 hover:text-purple-500 transition-colors"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -184,7 +184,7 @@ const Footer: React.FC<FooterProps> = ({ onPageChange }) => {
               <span className="text-gray-600">|</span>
               <a 
                 href="/forms/terms-conditions.html" 
-                className="hover:text-purple-500 transition-colors"
+                className="text-gray-300 hover:text-purple-500 transition-colors"
                 target="_blank"
                 rel="noopener noreferrer"
               >
