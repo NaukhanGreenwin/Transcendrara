@@ -38,45 +38,6 @@ const ServicesPage = ({ onPageChange }: { onPageChange: (page: string) => void }
           <div className="text-center mb-16">
             <h1 className="text-4xl font-bold text-gray-900 mb-4">Our Services</h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Discover our comprehensive range of transformative services designed to help you unlock your full potential
-              and achieve lasting positive change.
-            </p>
-          </div>
-        </AnimatedSection>
-
-        <AnimatedSection>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            <ServiceCard
-              title="Advanced Hypnotherapy"
-              description="Experience profound transformation through guided hypnotic states that help reprogram limiting beliefs and behaviors."
-              icon={<Brain className="w-8 h-8 text-purple-600" />}
-              onSelect={() => onPageChange('hypnotherapy')}
-            />
-            <ServiceCard
-              title="Mindfulness Training"
-              description="Learn powerful mindfulness techniques to enhance presence, reduce stress, and cultivate mental clarity."
-              icon={<Lotus className="w-8 h-8 text-purple-600" />}
-              onSelect={() => onPageChange('mindfulness')}
-            />
-            <ServiceCard
-              title="Performance Coaching"
-              description="Unlock peak performance through integrated coaching that aligns your mind, body, and spirit."
-              icon={<Rocket className="w-8 h-8 text-purple-600" />}
-              onSelect={() => onPageChange('performance')}
-            />
-            <ServiceCard
-              title="Group Sessions"
-              description="Join our supportive community sessions for shared growth, learning, and transformation."
-              icon={<Users className="w-8 h-8 text-purple-600" />}
-              onSelect={() => onPageChange('group')}
-            />
-          </div>
-        </AnimatedSection>
-
-        <AnimatedSection>
-          <div className="mt-16 text-center mb-10">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Service Areas</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Comprehensive healing solutions tailored to your needs
             </p>
           </div>
@@ -123,6 +84,45 @@ const ServicesPage = ({ onPageChange }: { onPageChange: (page: string) => void }
               <h3 className="text-xl font-semibold text-purple-600 mb-3">Weight Loss</h3>
               <p className="text-gray-600">Transform your relationship with food and achieve sustainable results.</p>
             </div>
+          </div>
+        </AnimatedSection>
+
+        <AnimatedSection>
+          <div className="text-center mb-16 mt-16">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Approaches</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Discover our comprehensive range of transformative services designed to help you unlock your full potential
+              and achieve lasting positive change.
+            </p>
+          </div>
+        </AnimatedSection>
+
+        <AnimatedSection>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            <ServiceCard
+              title="Advanced Hypnotherapy"
+              description="Experience profound transformation through guided hypnotic states that help reprogram limiting beliefs and behaviors."
+              icon={<Brain className="w-8 h-8 text-purple-600" />}
+              onSelect={() => onPageChange('hypnotherapy')}
+            />
+            <ServiceCard
+              title="Mindfulness Training"
+              description="Learn powerful mindfulness techniques to enhance presence, reduce stress, and cultivate mental clarity."
+              icon={<Lotus className="w-8 h-8 text-purple-600" />}
+              onSelect={() => onPageChange('mindfulness')}
+            />
+            <ServiceCard
+              title="Performance Coaching"
+              description="Unlock peak performance through integrated coaching that aligns your mind, body, and spirit."
+              icon={<Rocket className="w-8 h-8 text-purple-600" />}
+              onSelect={() => onPageChange('performance')}
+            />
+            <ServiceCard
+              title="Group Sessions"
+              description="Join our supportive community sessions for shared growth, learning, and transformation."
+              icon={<Users className="w-8 h-8 text-purple-600" />}
+              onSelect={() => onPageChange('group')}
+            />
           </div>
         </AnimatedSection>
 
