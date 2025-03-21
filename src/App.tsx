@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Sparkles, Brain, Rocket, ArrowUpRight, Bot as Lotus, Waves, Heart, Star, Users } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -19,6 +19,29 @@ import BookingPage from './pages/BookingPage';
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
+
+  // Add event listener for custom pageChange events
+  useEffect(() => {
+    const handlePageChangeEvent = (event: CustomEvent) => {
+      if (event.detail && event.detail.page) {
+        setCurrentPage(event.detail.page);
+      }
+    };
+
+    // Add event listener
+    window.addEventListener('pageChange', handlePageChangeEvent as EventListener);
+
+    // Check for hash in URL
+    const hash = window.location.hash.replace('#', '');
+    if (hash && ['home', 'services', 'about', 'pricing', 'hypnotherapy', 'mindfulness', 'performance', 'group', 'booking'].includes(hash)) {
+      setCurrentPage(hash);
+    }
+
+    // Cleanup
+    return () => {
+      window.removeEventListener('pageChange', handlePageChangeEvent as EventListener);
+    };
+  }, []);
 
   const HomePage = () => (
     <>
