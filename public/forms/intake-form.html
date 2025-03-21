@@ -44,6 +44,7 @@
             border-radius: 4px;
             box-sizing: border-box;
             margin-bottom: 10px;
+            background-color: #fff;
         }
         input[type="checkbox"],
         input[type="radio"] {
@@ -94,6 +95,20 @@
             display: flex;
             justify-content: space-between;
         }
+        .instructions {
+            background-color: #f0ebf8;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            border-left: 4px solid #6a0dad;
+        }
+        .instructions h3 {
+            margin-top: 0;
+            color: #6a0dad;
+        }
+        .instructions ol {
+            margin-bottom: 0;
+        }
         @media print {
             .no-print {
                 display: none !important;
@@ -119,12 +134,25 @@
                 background-color: white;
                 border: 1px solid #ddd;
             }
+            .instructions {
+                display: none;
+            }
         }
     </style>
     <script src="convert-pdf.js"></script>
 </head>
 <body>
     <h1>Hypnotherapy Intake Form</h1>
+    
+    <div class="instructions no-print">
+        <h3>How To Complete This Form</h3>
+        <ol>
+            <li>Fill out all the relevant sections of the form below.</li>
+            <li>Your information is automatically saved as you type (only on your device).</li>
+            <li>Once completed, click the "Download as PDF" button to save the form.</li>
+            <li>Email the completed PDF to <strong>contact@transcendara.com</strong> before your session.</li>
+        </ol>
+    </div>
     
     <div class="section-note">
         Please complete this form to help us better understand your needs and tailor your hypnotherapy experience.
@@ -478,5 +506,65 @@
             <span>Date</span>
         </div>
     </div>
+
+    <script>
+        // Add form validation when downloading the PDF
+        document.addEventListener('DOMContentLoaded', function() {
+            // Find the buttons after they're added by convert-pdf.js
+            setTimeout(function() {
+                const printButtons = document.querySelectorAll('button');
+                
+                printButtons.forEach(button => {
+                    if (button.innerText === 'Download as PDF') {
+                        button.addEventListener('click', function(e) {
+                            // Check required fields before allowing print
+                            const requiredFields = document.querySelectorAll('[required]');
+                            let allFieldsValid = true;
+                            let firstInvalidField = null;
+                            
+                            requiredFields.forEach(field => {
+                                if (!field.value.trim()) {
+                                    allFieldsValid = false;
+                                    field.style.borderColor = '#f44336';
+                                    
+                                    if (!firstInvalidField) {
+                                        firstInvalidField = field;
+                                    }
+                                } else {
+                                    field.style.borderColor = '#ddd';
+                                }
+                            });
+                            
+                            // Required checkboxes
+                            const requiredCheckboxes = document.querySelectorAll('input[type="checkbox"][required]');
+                            requiredCheckboxes.forEach(checkbox => {
+                                if (!checkbox.checked) {
+                                    allFieldsValid = false;
+                                    checkbox.parentElement.style.color = '#f44336';
+                                    
+                                    if (!firstInvalidField) {
+                                        firstInvalidField = checkbox;
+                                    }
+                                } else {
+                                    checkbox.parentElement.style.color = 'inherit';
+                                }
+                            });
+                            
+                            if (!allFieldsValid) {
+                                e.stopImmediatePropagation();
+                                alert('Please fill in all required fields before downloading the form.');
+                                
+                                if (firstInvalidField) {
+                                    firstInvalidField.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                                }
+                                
+                                return false;
+                            }
+                        }, true);
+                    }
+                });
+            }, 500);
+        });
+    </script>
 </body>
 </html> 
