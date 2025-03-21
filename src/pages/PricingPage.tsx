@@ -134,27 +134,27 @@ const PricingPage = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <PricingCard
               title="6 Sessions Package"
-              duration="1 hour 20 minutes"
+              duration="50 minutes"
               price="$550"
-              description="1 hour 20 min first session booking. Remaining 50 minute bookings will be scheduled after each session."
+              description="50 minute sessions, scheduled after each completed session."
               icon={<Package className="w-5 h-5" />}
               isPackage
               onBookNow={handleBookNow}
             />
             <PricingCard
               title="12 Sessions Package"
-              duration="1 hour 20 minutes"
+              duration="50 minutes"
               price="$1,100"
-              description="1 hour 20 minute first session booking. Remaining 50 minute bookings will be scheduled after each session."
+              description="50 minute sessions, scheduled after each completed session."
               icon={<Package className="w-5 h-5" />}
               isPackage
               onBookNow={handleBookNow}
             />
             <PricingCard
               title="20 Sessions Package"
-              duration="1 hour 20 minutes"
+              duration="50 minutes"
               price="$1,600"
-              description="1 hour 20 minute first session booking. Remaining 50 minute bookings will be scheduled after each session."
+              description="50 minute sessions, scheduled after each completed session."
               icon={<Package className="w-5 h-5" />}
               isPackage
               onBookNow={handleBookNow}
