@@ -105,7 +105,7 @@ const PricingPage = () => {
           <PricingCard
             title="Initial Hypnosis Session"
             duration="1 hour 20 minutes"
-            price="$150"
+            price="$150 (USD)"
             description="First time hypnosis clients"
             icon={<Video className="w-5 h-5" />}
             onBookNow={handleBookNow}
@@ -113,7 +113,7 @@ const PricingPage = () => {
           <PricingCard
             title="Follow-up Hypnosis Session"
             duration="50 minutes"
-            price="$100"
+            price="$100 (USD)"
             description="For returning clients"
             icon={<Video className="w-5 h-5" />}
             onBookNow={handleBookNow}
@@ -121,7 +121,7 @@ const PricingPage = () => {
           <PricingCard
             title="Group Session Relaxation Hypnotherapy"
             duration="50 minutes"
-            price="$150"
+            price="$150 (USD)"
             description="Group relaxation session via Zoom"
             icon={<Users className="w-5 h-5" />}
             onBookNow={handleBookNow}
@@ -135,7 +135,7 @@ const PricingPage = () => {
             <PricingCard
               title="6 Sessions Package"
               duration="1 hour 20 minutes"
-              price="$550"
+              price="$550 (USD)"
               description="1 hour 20 min first session booking. Remaining 50 minute bookings will be scheduled after each session."
               icon={<Package className="w-5 h-5" />}
               isPackage
@@ -144,7 +144,7 @@ const PricingPage = () => {
             <PricingCard
               title="12 Sessions Package"
               duration="1 hour 20 minutes"
-              price="$1,100"
+              price="$1,100 (USD)"
               description="1 hour 20 minute first session booking. Remaining 50 minute bookings will be scheduled after each session."
               icon={<Package className="w-5 h-5" />}
               isPackage
@@ -153,7 +153,7 @@ const PricingPage = () => {
             <PricingCard
               title="20 Sessions Package"
               duration="1 hour 20 minutes"
-              price="$1,600"
+              price="$1,600 (USD)"
               description="1 hour 20 minute first session booking. Remaining 50 minute bookings will be scheduled after each session."
               icon={<Package className="w-5 h-5" />}
               isPackage
