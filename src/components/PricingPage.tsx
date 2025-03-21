@@ -14,6 +14,14 @@ interface PricingOption {
 const PricingPage = () => {
   const sessions: PricingOption[] = [
     {
+      title: "Complimentary Phone Consultation",
+      duration: "30 minutes",
+      price: 0,
+      description: "One time use only",
+      location: "Phone call",
+      icon: <Phone className="w-6 h-6" />,
+    },
+    {
       title: "Initial Hypnosis Session",
       duration: "1 hour 20 minutes",
       price: 150,
@@ -28,14 +36,6 @@ const PricingPage = () => {
       description: "For returning clients",
       location: "Online via Zoom",
       icon: <Video className="w-6 h-6" />,
-    },
-    {
-      title: "Complimentary Phone Consultation",
-      duration: "30 minutes",
-      price: 0,
-      description: "One time use only",
-      location: "Phone call",
-      icon: <Phone className="w-6 h-6" />,
     },
     {
       title: "Group Session Relaxation Hypnotherapy",

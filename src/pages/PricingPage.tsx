@@ -82,6 +82,13 @@ const PricingPage = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
           <PricingCard
+            title="Complimentary Phone Consultation"
+            duration="30 minutes"
+            price="Free"
+            description="One time use only"
+            icon={<Phone className="w-5 h-5" />}
+          />
+          <PricingCard
             title="Initial Hypnosis Session"
             duration="1 hour 20 minutes"
             price="$150"
@@ -94,13 +101,6 @@ const PricingPage = () => {
             price="$100"
             description="For returning clients"
             icon={<Video className="w-5 h-5" />}
-          />
-          <PricingCard
-            title="Complimentary Phone Consultation"
-            duration="30 minutes"
-            price="Free"
-            description="One time use only"
-            icon={<Phone className="w-5 h-5" />}
           />
           <PricingCard
             title="Group Session Relaxation Hypnotherapy"
