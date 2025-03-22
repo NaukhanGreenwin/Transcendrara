@@ -11,7 +11,7 @@ interface Testimonial {
 const testimonials: Testimonial[] = [
   {
     quote: "The mindfulness techniques I learned here have become an essential part of my daily routine. My stress levels have decreased significantly.",
-    author: "Arjun Patel",
+    author: "Simon Enright", 
     role: "Tech Entrepreneur"
   },
   {
