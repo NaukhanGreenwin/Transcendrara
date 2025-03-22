@@ -15,7 +15,7 @@ const testimonials: Testimonial[] = [
     role: "Tech Entrepreneur"
   },
   {
-    quote: "The personalized approach and genuine care for my progress made all the difference. I'm achieving goals I once thought impossible.",
+    quote: "The personalized approach and genuine care for my progress made all the difference. I've achieved goals I once thought impossible.",
     author: "Priya Sharma",
     role: "Wellness Coach"
   },
