@@ -45,15 +45,17 @@ const FAQSection = () => {
             <AnimatedSection key={index}>
               <div className="bg-white rounded-lg border border-gray-200">
                 <button
-                  className="w-full px-6 py-4 flex justify-between items-center focus:outline-none"
+                  className="w-full px-6 py-4 flex justify-between items-start text-left"
                   onClick={() => setOpenIndex(openIndex === index ? null : index)}
                 >
                   <span className="text-lg font-medium text-gray-900">{faq.question}</span>
-                  {openIndex === index ? (
-                    <ChevronUp className="w-5 h-5 text-purple-600" />
-                  ) : (
-                    <ChevronDown className="w-5 h-5 text-gray-400" />
-                  )}
+                  <span className="mt-1 flex-shrink-0 ml-2">
+                    {openIndex === index ? (
+                      <ChevronUp className="w-5 h-5 text-purple-600" />
+                    ) : (
+                      <ChevronDown className="w-5 h-5 text-gray-400" />
+                    )}
+                  </span>
                 </button>
                 <AnimatePresence>
                   {openIndex === index && (
