@@ -104,7 +104,7 @@ const PricingPage = () => {
           />
           <PricingCard
             title="Initial Hypnosis Session"
-            duration="1 hour 20 minutes"
+            duration="50 minutes"
             price="$150"
             description="First time hypnosis clients"
             icon={<Video className="w-5 h-5" />}
